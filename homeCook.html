@@ -60,7 +60,7 @@
             <div id='totalprice'  class="col-md-12 col-sm-12 col-lg-12"  >
                     <h4>תשלום : <span id='totalPrice'>0</span></h4>
                 <div>
-            <button class='btn text-black text-center btn-lg-1' style='width=380px;' id='sendmassage' onclick='sendM()'>שלח הודעה בוואטצאפ</button>
+            <button class='btn text-black text-center btn-lg-1' style='width=380px;' id='sendmassage' '>שלח הודעה בוואטצאפ</button>
         </div>
     </div>
     
@@ -169,9 +169,24 @@
             footer.style.display = "none";
     }    
     }
+                                  
 )
 
-    
+    // שלב 1: קריאת מספר ההזמנות מ-localStorage בעת טעינת הדף
+let orderCount = localStorage.getItem('orderCount') ? parseInt(localStorage.getItem('orderCount')) : 0;
+
+// פונקציה להגדלת מספר ההזמנות ושמירתו ב-localStorage
+function incrementOrderCount() {
+    orderCount++;
+    localStorage.setItem('orderCount', orderCount);
+    inviteNum =  (`מספר ההזמנה: ${orderCount}`);
+    sendM(inviteNum)
+}
+
+// הוספת מאזין לאירוע הכפתור "שלח הודעה בוואטסאפ"
+document.getElementById('sendmassage').addEventListener('click', function() {
+    incrementOrderCount();
+});
 
 
     </script>
