@@ -39,6 +39,7 @@ img:hover{
     font-size: 30px;
 }
 body{
+    background-color: #275488;
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiGy8AtuWkS33lcf78gn2HeY70Ucvz0zGeCw&s');
     background-size: cover; /* התמונה תתפרס על כל הרקע מבלי לשנות את יחס הרוחב-גובה */
     background-position: center center; /* התמונה ממורכזת במרכז המסך */
