@@ -123,7 +123,7 @@
         totalPrice = parseFloat(document.getElementById('totalPrice').innerHTML);
         // console.log(totalPrice); 
     }
-    function sendM(){
+    function sendM(x){
         var tasty = document.getElementById('selectMenu').value;
         const phoneNum = '972524738622';
         
@@ -132,7 +132,8 @@
         let saltCque = document.getElementById('saltCque').value;
         let username = document.getElementById('name').value;
         
-        let message = ` שלום יפה , 
+        let message = `{x} ,
+        שלום יפה , 
 אני רוצה להזמין : 
 , עוגיות מלוחות ${saltCque} יחידות 
 , עוגיות מכונה ${Mque} יחידות 
