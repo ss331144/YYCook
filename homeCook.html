@@ -21,8 +21,8 @@
     </header>
     <h2 id="h2" class="text-white text-center col-sm-10 " >hello</h2>
     <div id="container" class="container" >
-        <div class="row">
-            <div class="col-md-4 col-sm-3">
+        <div class="row col-md-12 col-sm-4 col-lg-12 ">
+            <div class="col-lg-4 col-sm-12">
                 <div class="card">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUq-1biyj-fG8_YxsDGboV-MI_jvmMkKeLt7wO454tKouR8J3bk5aT20tO8iDSv2c52WM&usqp=CAU"  alt="מלוחות">
                     <div class="card-body">
@@ -32,7 +32,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-3">
+            <div class="col-lg-4 col-sm-12">
                 <div class="card">
                     <img src="ML.jpeg" alt="מכונה">
                     <div class="card-body">
@@ -42,7 +42,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-3">
+            <div class="col-lg-4 col-sm-12">
                 <div class="card">
                     
                     <img src="תמרים.jpeg"  alt="תמרים/שוקולד">
@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <div id='totalprice'  class="col-sm-4 col-lg-12"  >
+            <div id='totalprice'  class="col-md-12 col-sm-12 col-lg-12"  >
                     <h4>תשלום : <span id='totalPrice'>0</span></h4>
                 <div>
             <button class='btn text-black text-center btn-lg-1' style='width=380px;' id='sendmassage' onclick='sendM()'>שלח הודעה בוואטצאפ</button>
@@ -74,6 +74,7 @@
         let publish_name = document.getElementById('h2');
         let container = document.getElementById('container');
         let footer = document.getElementById('footer');
+        
         publish_name.style.display = "none";
         container.style.display = "none";
         footer.style.display = "none";
@@ -90,6 +91,7 @@
         var numMachineElement = document.getElementById('numMachine');
         var numRollElement = document.getElementById('numRoll');
         var numSlatElement = document.getElementById('numSlat');
+        
          document.getElementById('Rque').addEventListener('change', function() {
         
             
@@ -124,11 +126,16 @@
     function sendM(){
         var tasty = document.getElementById('selectMenu').value;
         const phoneNum = '972524738622';
+        
+        let Rque = document.getElementById('Rque').value;
+        let Mque = document.getElementById('Mque').value;
+        let saltCque = document.getElementById('saltCque').value;
+        
         let message = `שלום , 
 אני רוצה להזמין : 
-, עוגיות מלוחות ${numSlat.innerHTML} יחידות 
-, עוגיות מכונה ${numMachine.innerHTML} יחידות 
-. עוגיות מגולגלות ${numRoll.innerHTML} יחידות בטעם ${tasty} 
+, עוגיות מלוחות ${saltCque} יחידות 
+, עוגיות מכונה ${Mque} יחידות 
+. עוגיות מגולגלות ${Rque} יחידות בטעם ${tasty} 
 העלות הכוללת היא ${totalPrice} ש"ח. 
   תודה!` ;
 
